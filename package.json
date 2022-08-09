@@ -4,5 +4,8 @@
   },
   "devDependencies": {
     "chromedriver": "^104.0.0"
+  },
+  "scripts": {
+    "test": "nightwatch"
   }
 }
