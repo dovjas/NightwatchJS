@@ -5,11 +5,11 @@
 
   <testsuite name="yahoo"
     errors="0" failures="1" hostname="" id="" package="yahoo" skipped="0"
-    tests="1" time="21.23" timestamp="">
+    tests="1" time="20.23" timestamp="">
   
-    <testcase name="Sign in - Enter invalid email" classname="yahoo" time="21.23" assertions="2">
+    <testcase name="Sign Up - Leave Last name empty" classname="yahoo" time="20.23" assertions="2">
 
-      <failure message="Testing if element &lt;#username-error&gt; is visible in 5000ms - expected &#34;is visible&#34; but got: &#34;element could not be located&#34; (5817ms)">    at Object.Sign in - Enter invalid email (C:\Users\KARINA\React\NightwatchJS\tests\yahoo.js:16:21)</failure>
+      <failure message="Testing if element &lt;reg-error-lastName&gt; is visible in 5000ms - expected &#34;is visible&#34; but got: &#34;element could not be located&#34; (5243ms)">    at Object.Sign Up - Leave Last name empty (C:\Users\KARINA\React\NightwatchJS\tests\yahoo.js:39:17)</failure>
 
     
     </testcase>
