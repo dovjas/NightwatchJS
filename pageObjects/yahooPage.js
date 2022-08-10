@@ -6,17 +6,17 @@ const yahooCommands = {
             this.click('@acceptCookies')
             this.waitForElementVisible('@header',4000)
     },
-    attemptSignIn:function(){
+    attemptSignIn:function(email){
         //Navigate to Sign In
         this.click('@signInButton')
         //Attempt to Sign In
-            this.setValue('@emailField','nodemoemail.com')
+            this.setValue('@emailField',email)
             this.click('@submitSignIn')
     },
-    validateErrorMesage: function(){
+    validateErrorMesage: function(message){
         //Validate error message
         this.assert.visible('@emailErrorMessage')
-        this.assert.containsText('@emailErrorMessage',"Sorry, we don't recognize this email")
+        this.assert.containsText('@emailErrorMessage',message)
 
     }
 

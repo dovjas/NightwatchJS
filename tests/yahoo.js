@@ -3,8 +3,8 @@ module.exports = {
         let yahooPage = client.page.yahooPage();
        
         yahooPage.prepareWebsite();
-        yahooPage.attemptSignIn();
-        yahooPage.validateErrorMesage();
+        yahooPage.attemptSignIn('nodemoemail.com');
+        yahooPage.validateErrorMesage("Sorry, we don't recognize this email.");
     },
 
 
