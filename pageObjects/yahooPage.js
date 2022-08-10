@@ -18,14 +18,16 @@ const yahooCommands = {
         this.assert.visible(element)
         this.assert.containsText(element,message)
     },
-    attemptRegistration: function () {
-        this.click('@signInButton')
-        this.click('@createAccButton')
-        this.setValue('@firstName', 'John')
-        this.setValue('@email', 'test758492')
-        this.setValue('@password', '4673857Ajsdhdbf')
-        this.setValue('@birthYear', '1990')
-        this.click('@submitRegistration')
+    attemptRegistration: function (data) {
+        return this
+
+            .click('@signInButton')
+            .click('@createAccButton')
+            .setValue('@firstName', data.firstName)
+            .setValue('@email', data.email)
+            .setValue('@password', data.password)
+            .setValue('@birthYear', data.year)
+            .click('@submitRegistration')
       }
 
 }

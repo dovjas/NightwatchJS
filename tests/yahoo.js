@@ -8,9 +8,15 @@ module.exports = {
     // },
     'Sign up - Leave Last name empty': client => {
         let yahooPage = client.page.yahooPage();
+        const personData = {
+            firstName: 'John',
+            email: 'test758492',
+            password: '4673857Ajsdhdbf',
+            year: '1990'
+        }
     
         yahooPage.prepareWebsite();
-        yahooPage.attemptRegistration();
+        yahooPage.attemptRegistration(personData);
         yahooPage.validateErrorMessage('@lastNameErrorMessage', 'This is required');
     }
 }
