@@ -2,20 +2,9 @@ module.exports = {
     'Sign in - Enter invalid email': client => {
         let yahooPage = client.page.yahooPage();
        
-        yahooPage
-        //Open the page
-            .navigate()
-        //Accept the cookies
-            .click('@acceptCookies')
-            .waitForElementVisible('@header',4000)
-        //Navigate to Sign In
-            .click('@signInButton')
-        //Attempt to Sign In
-            .setValue('@emailField','nodemoemail.com')
-            .click('@submitSignIn')
-        //Validate error message
-            .assert.visible('@emailErrorMessage')
-            .assert.containsText('@emailErrorMessage',"Sorry, we don't recognize this email")
+        yahooPage.prepareWebsite();
+        yahooPage.attemptSignIn();
+        yahooPage.validateErrorMesage();
     },
 
 
